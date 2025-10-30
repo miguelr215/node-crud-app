@@ -6,6 +6,8 @@ const PORT = 3000;
 
 // middleware that is required to convert json to JS object
 app.use(express.json());
+// middleware for form URL encoded data
+app.use(express.urlencoded({ extended: false }));
 
 app.get("/", (req, res) => {
 	res.send("Hello World!");
